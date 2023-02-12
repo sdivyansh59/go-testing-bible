@@ -1,6 +1,8 @@
 package calculator_test
 
 import (
+	"fmt"
+	"os"
 	"testing"
 
 	"github.com/sdivyansh59/go-testing-bible/calculator"
@@ -11,6 +13,13 @@ type TestCase struct {
 	value int
 	expected bool
 	actual bool
+}
+
+func TestMain(m *testing.M) {
+	fmt.Println("Hello World")
+	ret := m.Run()
+	fmt.Println("Test have executed")
+	os.Exit(ret)
 }
 
 func TestCalculeIsArmstrong(t *testing.T) {
