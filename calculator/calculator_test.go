@@ -62,3 +62,21 @@ func TestNegativeCalculeIsArmstrong(t *testing.T) {
 	})
 	
 }
+
+
+
+// Benchmark
+//run: go test ./... -run=Benchmark -bench=.
+func BenchmarkCalculateIsArmstrong370(b *testing.B){
+	benchmarkCalculateIsArmstrong(370,b)
+}
+
+func BenchmarkCalculateIsArmstrong371(b *testing.B){
+	benchmarkCalculateIsArmstrong(371,b)
+}
+
+func benchmarkCalculateIsArmstrong(input int , b * testing.B) {
+	for i :=0 ; i< b.N; i++ {
+		calculator.CalculateIsArmstrong(input)
+	}
+}
