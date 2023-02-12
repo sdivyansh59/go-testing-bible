@@ -13,3 +13,17 @@ func CalculateIsArmstrong(n int) bool {
 	return n == int(math.Pow(float64(a),3)+ math.Pow(float64(b),3)+ math.Pow(float64(c),3))
 
 }
+
+
+// RandomFunction
+func RandomFunction(n int) bool {
+	if n> 10 {
+		return true
+	} else {
+		return false
+	}
+}
+
+//1. To check code coverage :- go test ./... -cover
+//2. go test ./... -coverprofile=coverage.out  
+// go tool cover -html=coverage.out
